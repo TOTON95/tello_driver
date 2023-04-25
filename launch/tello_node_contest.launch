@@ -23,4 +23,5 @@
 	</group>
 
     <node pkg="image_transport" name="image_compressed_2_mambo" type="republish" args="h264 in:=/tello/image_raw/ raw out:=/mambo_out"/>
+    <node pkg="topic_tools" name="twistmambo2tello" type="relay" args="/mambo/cmd_vel /tello/cmd_vel"/>
 </launch>
